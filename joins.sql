@@ -20,8 +20,10 @@ SELECT e.emp_name, d.department_name
 FROM employee e
 LEFT JOIN department d ON e.dept_id = d.department_id;
 
-
-
+-- RIGHT JOIN
+SELECT e.emp_name, d.department_name
+FROM employee e
+RIGHT JOIN department d ON e.dept_id = d.department_id;
 
 
 
