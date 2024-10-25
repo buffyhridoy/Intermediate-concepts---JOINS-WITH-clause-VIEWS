@@ -25,9 +25,13 @@ SELECT e.emp_name, d.department_name
 FROM employee e
 RIGHT JOIN department d ON e.dept_id = d.department_id;
 
+-- Fetch details of ALL employee, Their manager, their department, and the project they work on
 
-
-
+SELECT e.emp_name, d.department_name, m.manager_id, p.project_name
+FROM employee e
+LEFT JOIN department d ON e.dept_id = d.department_id
+INNER JOIN manager m ON m.manager_id = e.manager_id
+LEFT JOIN projects p ON p.team_member_id = e.emp_id;
 
 
 
